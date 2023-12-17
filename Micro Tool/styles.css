@@ -1,0 +1,428 @@
+/* styles.css */
+
+body {
+    background-image: linear-gradient(45deg, #FFFF 20%, #00FFAB);
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    font-family: 'Wix Madefor Display', sans-serif;
+}
+
+.parent-container {
+    width: 50rem;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.tool-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1rem;
+    background-color: rgba(53, 162, 159, 0.3);
+    width: 100%;
+    height: 4rem;
+    width: calc(100% - 2rem); /* Subtract 2rem for the left and right padding */
+    border-radius: 1.3rem;
+    margin-bottom: 1rem;
+}
+
+.tool-title {
+    text-align: right;
+}
+
+.tool-title h1 {
+    margin: 0;
+    font-weight: bolder;
+    font-size: 2.7rem;
+    color: #071952;
+
+}
+
+@keyframes jump {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-7px);
+    }
+    60% {
+        transform: translateY(-11px);
+    }
+}
+
+
+img {
+    width: 10vh;
+    animation: jump 4s ease infinite;
+}
+
+
+/* Apply animation delays for each image */
+img:nth-child(1) {
+    animation-delay: calc(0.2s * 1); 
+}
+img:nth-child(2) {
+    animation-delay: calc(0.2s * 2);
+}
+img:nth-child(3) {
+    animation-delay: calc(0.2s * 3); 
+}
+img:nth-child(4) {
+    animation-delay: calc(0.2s * 4); 
+}
+img:nth-child(5) {
+    animation-delay: calc(0.2s * 5); 
+}
+
+
+.container {
+    display: flex;
+    width: 50rem;
+    flex-grow: 1;
+    margin: 0 auto;
+    border-radius: 1.3rem;
+}
+
+#screen .tool-inst {
+    text-align: center;
+    cursor: default;
+    font-size: 2.3rem;
+    opacity: 0.2;
+    color: black;
+}
+
+#screen img {
+    display: block;
+    margin: 0 auto  ;
+    animation: none;
+    opacity: 0.2;
+    width: 34vh;
+}
+
+.left {
+    margin-right: 1rem;
+    flex-grow: 1; /* Add this line */
+}
+
+.left h2 {
+    font-size: 24px;
+}
+
+.right {
+    background-color: rgba(53, 162, 159, 0.3);
+    border-radius: 1.3rem;
+    width: 35rem;
+    flex-grow: 1;
+    overflow-y: auto;
+    padding: 0 1rem 1rem 1rem;
+}
+
+input[type="number"],
+select,
+button {
+    font-size: 16px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Style for the 3 buttons */
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.button-container button {
+    background-color: rgba(53, 162, 159, 0.3);
+    width: 100%;
+    height: 7rem;
+    border-radius: 1.3rem;
+    border-style: none;
+    font-family: 'Wix Madefor Display', sans-serif;
+    font-weight: 900;
+    color: #0B666A;
+}
+
+.button-container button:hover {
+    background-color: #35A29F;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+.button-container button:focus {
+    background-color: #35A29F;
+    color: white;
+}
+
+.button-container button:active {
+    background-color: #35A29F;
+    color: white;
+}
+
+#converterButton, #flexboxButton {
+    margin-bottom: 1rem;
+}
+
+/* Style for the generated password */
+#generatedPassword {
+    width: 60%; /* Adjust the width as per your preference */
+    padding: 10px;
+    font-size: 18px;
+    border-style: none;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    background-color: white;
+}
+
+/* Style for the Password Generator section */
+#passwordGeneratorSection {
+    margin-top: 20px;
+}
+
+/* Media query for responsiveness */
+@media (max-width: 600px) {
+    .container {
+        flex-direction: column;
+        max-width: 100%;
+    }
+
+    .right {
+        flex: 1;
+    }
+}
+
+
+/* ================== FOR MASS AND LENGTH ============== */
+
+#converter-label2 {
+    margin-top: 1.5rem;
+}
+
+#fromLengthUnit, #toLengthUnit, #fromMassUnit, #toMassUnit {
+    width: 7.5rem;
+}
+
+#convertLengthButton, #convertMassButton {
+    margin-left: 1rem;
+}
+
+.lenght-result {
+    display: flex;
+    background-color: white;
+    padding: 0.5rem 0.5rem;
+    border-radius: 0.6rem;
+}
+
+.lenght-result button {
+    margin: 0;
+}
+
+.lenght-result-left {
+    width: 30rem;
+   display: flex;
+   align-items: center;
+}
+
+.lenght-result, .mass-result {
+    margin-top: 0.5rem;
+}
+
+.mass-result {
+    display: flex;
+    background-color: white;
+    padding: 0.5rem 0.5rem;
+    border-radius: 0.6rem;
+}
+
+.mass-result button {
+    margin: 0;
+}
+
+.mass-result-left {
+    width: 30rem;
+   display: flex;
+   align-items: center;
+}
+
+/* ================ for flexbox ============== */
+
+.fb-top {
+    display: flex;
+}
+
+.fb-items1 {
+    margin-right: 2rem;
+}
+
+.flexbox-label {
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.fb-bottom {
+    height: 7rem;
+    display: flex;
+    background-color: white;
+    border-radius: 1rem;
+}
+
+.fb-bottom-left {
+    width: 15rem;
+}
+
+.fb-bottom-right {
+    flex-grow: 1; /* This makes the right container take up remaining space */
+    display: flex; /* Use flex to control the button position */
+    justify-content: flex-end; /* Push content to the right (end) */
+    align-items: flex-end; /* Push content to the bottom (end) */
+    padding: 0.5rem; /* Add some padding for spacing */
+}
+
+#flexboxResult {
+    font-size: 0.7rem;
+}
+
+/* ================ password generator ============== */
+#passwordLength {
+    width: 15rem;
+    margin-bottom: 1.2rem;
+
+}
+
+#generatePassword {
+    margin: 0.7rem 0 1.2rem 0;
+}
+.genpass-container {
+    background-color: white;
+    height: 2.6rem;
+    border-radius: 0.9rem;
+    display: flex;
+    
+}
+
+.genpass-right {
+    display: flex;
+    align-items: center;
+    margin-top: 8px;
+    margin-left: 17px;
+}
+
+#generatedPassword {
+    border-radius: 0.8rem;
+    width: 27rem;
+}
+
+
+/* ================ for all tools ============== */
+
+.h2tools-tile {
+    color: #071952;
+}
+
+.tools-label {
+    font-size: 1.2rem;
+    color: #333;
+}
+
+
+.all-input {
+    width: 10rem;
+    padding: 3px 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 0.5rem;
+    font-size: 16px;
+}
+
+.tools-button {
+    color: white;
+    background-color: #35A29F;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+    border-style: none;
+    border-radius: 8px;
+    padding: 0.3rem 0.5rem;
+    margin: 0 0 0.5rem 0;
+}
+
+.tools-button:hover {
+    background-color: #97FEED;
+    color: #0B666A;
+}
+
+/* =================== */
+
+.hidden {
+    display: none;
+}
+
+#toggleNoteButton {
+    position: fixed;
+    top: 0; /* Adjust the top position as needed */
+    left: 0; /* Adjust the right position as needed */
+}
+
+.group-section {
+    position: fixed;
+    top: 0; /* Adjust the top position as needed */
+    left: 0; /* Adjust the right position as needed */
+    background-color:white;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+    border-radius: 1.3rem;
+    width: 15rem;
+    padding: 1rem;
+    margin: 6rem 0 0 5rem;
+}
+
+.group-section h3 {
+    font-size: 1.6rem;
+    color: #071952;
+}
+
+.group-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.group-section li {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #0B666A;
+}
+
+.noteP {
+    font-size: 0.8rem;;
+}
+
+
+/* Define styles for the image-button class */
+.image-button {
+    background: none; /* Remove the default button background */
+    border: none; /* Remove the default button border */
+    padding: 0; /* Remove any padding */
+    cursor: pointer; /* Add a pointer cursor to indicate it's clickable */
+    margin: 2rem 2rem;
+    
+}
+
+.image-button img {
+    width: 8vh;
+    animation: none;
+    transition: 0.3s;
+}
+
+.image-button img:hover {
+    opacity: 0.4;
+}
